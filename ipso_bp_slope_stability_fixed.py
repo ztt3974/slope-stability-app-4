@@ -20,8 +20,11 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              roc_auc_score)
 from sklearn.ensemble import (RandomForestClassifier, GradientBoostingClassifier, 
                              ExtraTreesClassifier)
-from imblearn.over_sampling import BorderlineSMOTE, ADASYN
-from imblearn.combine import SMOTETomek
+def _get_imblearn():
+    """延迟加载 imblearn（仅训练时使用，预测时不需要，避免 Python 3.14 兼容性问题）"""
+    from imblearn.over_sampling import BorderlineSMOTE, ADASYN
+    from imblearn.combine import SMOTETomek
+    return BorderlineSMOTE, ADASYN, SMOTETomek
 import optuna
 import xgboost as xgb
 import lightgbm as lgb

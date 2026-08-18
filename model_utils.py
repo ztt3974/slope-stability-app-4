@@ -14,8 +14,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
-# 复用训练脚本中的特征工程与集成模型类（该脚本被 __main__ 保护，导入安全）
-from ipso_bp_slope_stability_fixed import create_features, OptimizedEnsemble
+# 从独立的预测引擎模块导入（不含 imblearn 依赖，兼容 Streamlit Cloud Python 3.14）
+from prediction_engine import create_features, OptimizedEnsemble
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models")
