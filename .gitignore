@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Streamlit 缓存
+.streamlit/secrets.toml
+
+# 模型训练输出（体积大，不入库）
+ipso_bp_model_output/
+ipso_bp_model_output 1/
+*.pkl
+*.joblib
+
+# 例外：预训练模型需要上传（Streamlit 云端部署直接加载，无需现场训练）
+!models/ipso_bp_ensemble_model.pkl
+
+# 历史预测记录（用户本地数据）
+history/
+
+# 数据文件（含原始研究数据，按需放开）
+*.xlsx
+*.xls
+
+# 系统文件
+.DS_Store
+Thumbs.db
+catboost_info/
