@@ -16,7 +16,7 @@ import model_utils as mu
 
 # ------------------------- Page config -------------------------
 st.set_page_config(
-    page_title="Intelligent Slope Stability Prediction System",
+    page_title="Intelligent Prediction System for Slope Stability",
     page_icon="⛰️",
     layout="wide",
 )
