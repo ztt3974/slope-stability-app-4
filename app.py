@@ -16,7 +16,7 @@ import model_utils as mu
 
 # ------------------------- Page config -------------------------
 st.set_page_config(
-    page_title="Intelligent Prediction System For Slope Stability",
+    page_title="边坡稳定性智能预测系统Intelligent Prediction System For Slope Stability",
     page_icon="⛰️",
     layout="wide",
 )
@@ -138,7 +138,7 @@ st.markdown(
     <div style="padding:1.2rem 1.5rem;border-radius:0.8rem;
                 background:linear-gradient(90deg,#1f3a5f 0%,#2e6da4 100%);
                 color:white;">
-        <h1 style="margin:0;font-size:1.8rem;">⛰️ Intelligent Prediction System For Slope Stability</h1>
+        <h1 style="margin:0;font-size:1.8rem;">⛰️ 边坡稳定性智能预测系统Intelligent Prediction System For Slope Stability</h1>
         <p style="margin:0.4rem 0 0 0;opacity:0.9;">
             Based on Ensemble Model
             (XGBoost · LightGBM · CatBoost · Random Forest · Extra Trees · Gradient Boosting)
