@@ -154,7 +154,7 @@ load_history()
 
 # ========================= Module 1: Parameter Input =========================
 with st.sidebar:
-    st.header("📋 Slope Parameter Input")
+    st.header("📋 边坡参数输入")
     st.caption("Enter the six slope parameters (type a value directly, "
                "or fine-tune with the −/+ buttons)")
 
@@ -184,7 +184,7 @@ with st.sidebar:
 
     st.divider()
     predict_clicked = st.button(
-        "🚀 Start Prediction", type="primary", width="stretch",
+        "🚀 开始预测", type="primary", width="stretch",
     )
     st.divider()
     with st.expander("ℹ️ Model Information"):
@@ -215,7 +215,7 @@ params = {
 left, right = st.columns([3, 2])
 
 with left:
-    st.subheader("📥 Current Input Parameters")
+    st.subheader("📥 当前输入参数")
     pnames = ["γ (kN/m³)", "C (kPa)", "φ (°)", "β (°)", "H (m)", "ru"]
     pvals = list(params.values())
     pshow = [f"{v:g}" for v in pvals]
@@ -253,7 +253,7 @@ if predict_clicked:
         st.rerun()
 
 with right:
-    st.subheader("📊 Prediction Result")
+    st.subheader("📊 预测结果")
     result = st.session_state.get("last_result")
     if result is None:
         st.warning("No prediction yet. Enter the parameters on the left and "
@@ -309,14 +309,14 @@ with right:
 
 # ========================= Module 4: History =========================
 st.divider()
-st.subheader("🗂️ Prediction History")
+st.subheader("🗂️ 历史记录")
 
 history = st.session_state.get("history", [])
 h_left, h_right = st.columns([3, 2])
 with h_left:
     st.caption(f"{len(history)} record(s), auto-saved to local history/predictions.csv")
 with h_right:
-    if st.button("🗑️ Clear History"):
+    if st.button("🗑️ 清空记录"):
         st.session_state.history = []
         st.session_state.pop("last_result", None)
         if os.path.exists(HISTORY_FILE):
